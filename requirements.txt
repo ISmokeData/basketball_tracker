@@ -1,6 +1,6 @@
-streamlit 
-opencv-python 
-requests 
+streamlit
+opencv-python-headless
+requests
 numpy
 ultralytics
 roboflow
