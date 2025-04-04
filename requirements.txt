@@ -7,3 +7,4 @@ roboflow
 supervision
 torch>=2.2.0
 easyocr
+norfair
