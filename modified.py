@@ -6,7 +6,7 @@ import tempfile
 import os
 import ultralytics
 from ultralytics import YOLO
-from norfair import Detection, Tracker, distances
+from norfair import Detection, Tracker
 import os
 os.environ["STREAMLIT_ENV"] = "production"
 
@@ -16,8 +16,11 @@ model = YOLO('best.pt')
 # Initialize EasyOCR
 reader = easyocr.Reader(['en'])
 
+def euclidean(detection, tracked_object):
+    return np.linalg.norm(detection.points - tracked_object.estimate)
+
 # Initialize NorFair Tracker
-tracker = Tracker(distance_function=distances.euclidean, distance_threshold=50)
+tracker = Tracker(distance_function=euclidean, distance_threshold=50)
 
 # Define colors for each class
 colors = {
