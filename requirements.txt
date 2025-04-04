@@ -2,7 +2,7 @@ streamlit
 opencv-python-headless
 requests
 numpy
-ultralytics
+ultralytics==8.3.85
 roboflow
 supervision
 torch==2.1.0

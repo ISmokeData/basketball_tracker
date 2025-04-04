@@ -4,11 +4,11 @@ import easyocr
 import numpy as np
 import tempfile
 import os
+import ultralytics
 from ultralytics import YOLO
 from norfair import Detection, Tracker
 import os
 os.environ["STREAMLIT_ENV"] = "production"
-
 
 # Load YOLO model
 model = YOLO('best.pt')
